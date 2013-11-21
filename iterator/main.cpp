@@ -75,7 +75,7 @@ int main()
   int i;
   Iterator *it = agg.createIterator();
   cout << "ITEM: " << it->currentItem() << endl;
-  while ((i == it->nextItem())) {
+  while ((i = it->nextItem())) {
     cout << "ITEM: " << i << endl;
   }
 
