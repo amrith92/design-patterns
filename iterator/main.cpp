@@ -72,13 +72,12 @@ int main()
   agg.add(5);
   agg.add(6);
 
+  int i;
   Iterator *it = agg.createIterator();
   cout << "ITEM: " << it->currentItem() << endl;
-  do {
-    if (it->isDone()) break;
-
-    cout << "ITEM: " << it->nextItem() << endl;
-  } while (!it->isDone());
+  while ((i == it->nextItem())) {
+    cout << "ITEM: " << i << endl;
+  }
 
   delete it;
 
